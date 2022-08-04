@@ -47,6 +47,21 @@
   <script src="js/index.js"></script>
   <!-- adding indexdb -->
   <script src="./js/idb.js"></script>
+
+  <script>
+    // this is an anonymous function
+    (function () {
+      // navigator = browser
+      if ("serviceWorker" in navigator) {
+        // It's important that we include the ./ in front of service-worker.js or it will break
+        // this registers the service worker
+        navigator.serviceWorker.register("./service-worker.js")
+          .then(() => console.log("Service Worker registered successfully."))
+          .catch(error => console.log("Service Worker registration failed:", error));
+      }
+      // the () immediately invokes the function
+    })();
+  </script>
 </body>
 
 </html>
