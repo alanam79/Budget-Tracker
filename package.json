@@ -4,9 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "webpack": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lite-server": "lite-server"
+    "lite-server": "lite-server",
+    "start:dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,9 @@
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
 }
